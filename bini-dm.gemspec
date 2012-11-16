@@ -1,7 +1,7 @@
 # -*- encoding: utf-8 -*-
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'bini-dm/version'
+require 'bini/dm/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "bini-dm"
@@ -16,7 +16,7 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
-  gem.add_runtime_dependency "bini", "0.3.0"
+  gem.add_runtime_dependency "bini"
   gem.add_runtime_dependency "datamapper"
   gem.add_runtime_dependency "dm-types"
   gem.add_runtime_dependency "dm-sqlite-adapter"

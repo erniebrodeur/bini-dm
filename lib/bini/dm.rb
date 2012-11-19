@@ -8,8 +8,8 @@ module Bini
     extend self
 
     def db_path
-      FileUtils.mkdir_p Bini::App.config_dir if !Dir.exist? Bini.config_dir
-      "#{Bini.config_dir}/#{Bini.name}.db"
+      FileUtils.mkdir_p Bini.config_dir if !Dir.exist? Bini.config_dir
+      "#{Bini.config_dir}/#{Bini.long_name}.db"
     end
 
     DataMapper::Logger.new($stdout, :debug)
